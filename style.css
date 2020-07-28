@@ -1,0 +1,64 @@
+* {
+  font-family: verdana;
+  margin: 0;
+}
+
+body {
+  background: #eee;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  background-color: white;
+  /*flex-wrap: wrap; once flex item can no longer shrink move to next line*/
+  flex-flow: column wrap;
+  /* flex-flow is the direction and wrap properties */
+
+  /* Justify content works on the main axis */
+  /* Align items works on the cross axis */
+  height: 600px;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  height: 100px;
+  max-width: 100px;
+  /* flex: 0 0 100px; */
+  /* min-width: 200px; */
+  /*flex-basis: 200px; similar to min-width it sets a starting width but flex-basis items will still shrink once there is no room unlike min-width items*/
+  /* flex-grow: 1; */
+  /* flex property sets flew-grow, flex-shrink, and flex-basis */
+  /* flex: 1 0 200px; */
+  /* flex: 1; */
+  /* 
+  Think about what the above is doing the grow is 1 so the items are growing into the available space at the same rate the shrink is 1 so they will shrink at the same rate the basis is 0 so they all can get as small as 0px
+  */
+}
+
+.one {
+  background-color: red;
+  /* flex-basis: 100px; */
+  /*flex-grow: 1; growth rate of flex item relative to other items in the available space*/
+  /*flex-shrink: 1;  opposite of flex-grow the bigger the number the more it shrinks*/
+}
+
+.two {
+  background-color: blue;
+  /* flex-basis: 200px; */
+  /* flex-grow: 2; */
+  /* flex-shrink: 2; */
+}
+
+.three {
+  background-color: green;
+  /* flex-basis: 300px; */
+  /* flex-grow: 3; */
+  /* flex-shrink: 3; */
+}
